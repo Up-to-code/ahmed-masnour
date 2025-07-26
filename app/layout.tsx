@@ -28,8 +28,16 @@ export const metadata: Metadata = {
     url: "https://ahmedmansour.com",
     siteName: "Ahmed Mansour",
     type: "website",
+    images: [
+      {
+        url: "/Untitled design - 2.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
+    
     card: "summary_large_image",
     title: "Ahmed Mansour - Entrepreneur & Business Builder",
     description: "Building companies from bold ideas. Creating impact through clarity and vision.",
@@ -38,7 +46,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-    generator: 'v0.dev'
+  
 }
 
 export default function RootLayout({

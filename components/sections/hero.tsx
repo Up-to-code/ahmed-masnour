@@ -48,7 +48,7 @@ export function Hero({ content }: HeroProps) {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <Image
-                  src="/me1.JPG"
+                  src="/Untitled design - 2.jpg"
                   alt={content.portraitAlt}
                   width={500}
                   height={700}

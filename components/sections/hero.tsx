@@ -48,7 +48,7 @@ export function Hero({ content }: HeroProps) {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <Image
-                  src="/placeholder.svg?height=700&width=500&text=Ahmed+Mansour+Portrait"
+                  src="/me1.JPG"
                   alt={content.portraitAlt}
                   width={500}
                   height={700}

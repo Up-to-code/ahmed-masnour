@@ -45,11 +45,11 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
   }
 
   return (
-    <section id="testimonials" className="py-32 px-6 bg-stone-50" ref={ref}>
+    <section id="testimonials" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-stone-50" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
           <motion.h2
-            className="text-5xl lg:text-6xl font-serif text-slate-900 text-center mb-20"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 text-center mb-12 md:mb-16 lg:mb-20"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8 }}
@@ -57,7 +57,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
             What They Say
           </motion.h2>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div key={index} variants={cardVariants}>
                 <motion.div
@@ -69,7 +69,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
                   whileTap={{ scale: 0.98 }}
                 >
                   <Card className="h-full bg-white transition-all duration-300 border-0 hover:shadow-lg">
-                    <CardContent className="p-8">
+                    <CardContent className="p-6 sm:p-8">
                       <div className="space-y-6">
                         <motion.div
                           whileHover={{ rotate: 15, scale: 1.1 }}
@@ -78,7 +78,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
                           <Quote className="w-12 h-12 text-slate-300" />
                         </motion.div>
                         <motion.blockquote
-                          className="text-lg leading-relaxed font-light text-slate-700"
+                          className="text-base sm:text-lg leading-relaxed font-light text-slate-700"
                           initial={{ opacity: 0 }}
                           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                           transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}

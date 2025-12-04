@@ -33,7 +33,7 @@ export function Hero({ content }: HeroProps) {
       style={{ opacity: heroOpacity, scale: heroScale }}
     >
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
           {/* Portrait */}
           <motion.div
             className="relative flex justify-center lg:justify-start order-2 lg:order-1"
@@ -67,9 +67,9 @@ export function Hero({ content }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <motion.h1
-                className="text-6xl lg:text-8xl font-serif text-slate-900 leading-tight tracking-tight"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif text-slate-900 leading-tight tracking-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -78,7 +78,7 @@ export function Hero({ content }: HeroProps) {
               </motion.h1>
 
               <motion.p
-                className="text-xl lg:text-2xl text-slate-600 font-light tracking-wide uppercase letter-spacing-wide"
+                className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 font-light tracking-wide uppercase letter-spacing-wide"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
@@ -87,7 +87,7 @@ export function Hero({ content }: HeroProps) {
               </motion.p>
 
               <motion.p
-                className="text-lg lg:text-xl text-slate-700 font-light leading-relaxed max-w-lg italic"
+                className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-700 font-light leading-relaxed max-w-lg mx-auto lg:mx-0 italic px-2 sm:px-0"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.0 }}
@@ -109,7 +109,7 @@ export function Hero({ content }: HeroProps) {
               >
                 <Button
                   size="lg"
-                  className="bg-slate-900 hover:bg-slate-800 text-white px-12 py-4 text-lg font-light tracking-wide transition-all duration-300 border-0"
+                  className="bg-slate-900 hover:bg-slate-800 text-white px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-light tracking-wide transition-all duration-300 border-0 w-full sm:w-auto"
                   onClick={scrollToAbout}
                   aria-label="Explore Ahmed's work"
                 >

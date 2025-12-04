@@ -49,7 +49,7 @@ export function Contact({ content, footer }: ContactProps) {
   }
 
   return (
-    <section id="contact" className="py-32 px-6 bg-white" ref={ref}>
+    <section id="contact" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-white" ref={ref}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -59,7 +59,7 @@ export function Contact({ content, footer }: ContactProps) {
         >
           <div className="text-center space-y-8">
             <motion.h2
-              className="text-5xl lg:text-6xl font-serif text-slate-900"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -68,7 +68,7 @@ export function Contact({ content, footer }: ContactProps) {
             </motion.h2>
 
             <motion.p
-              className="text-xl text-slate-600 font-light leading-relaxed max-w-2xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-slate-600 font-light leading-relaxed max-w-2xl mx-auto px-2 sm:px-0"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -77,7 +77,7 @@ export function Contact({ content, footer }: ContactProps) {
             </motion.p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             {/* Contact Info */}
             <motion.div
               className="space-y-12"
@@ -95,23 +95,23 @@ export function Contact({ content, footer }: ContactProps) {
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex-1">
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white bg-transparent transition-all duration-300"
+                    className="w-full border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white bg-transparent transition-all duration-300"
                     onClick={() => window.open(content.linkedin, "_blank")}
                   >
                     <Linkedin className="w-5 h-5 mr-2" />
                     LinkedIn
                   </Button>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex-1">
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white bg-transparent transition-all duration-300"
+                    className="w-full border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white bg-transparent transition-all duration-300"
                     onClick={() => window.open(content.twitter, "_blank")}
                   >
                     <Twitter className="w-5 h-5 mr-2" />
@@ -123,7 +123,7 @@ export function Contact({ content, footer }: ContactProps) {
 
             {/* Contact Form */}
             <motion.div
-              className="bg-stone-50 p-12"
+              className="bg-stone-50 p-6 sm:p-8 md:p-12"
               initial={{ opacity: 0, x: 30 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
               transition={{ duration: 0.8, delay: 0.5 }}

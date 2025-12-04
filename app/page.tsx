@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Certificates } from "@/components/sections/certificates";
 import { Startups } from "@/components/sections/startups";
+import { LatestUpdate } from "@/components/sections/latest-update";
 import { Vision } from "@/components/sections/vision";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Contact } from "@/components/sections/contact";
@@ -14,24 +15,24 @@ import { AnimatedCursor } from "@/components/animated-cursor";
 // Editable Content Configuration
 const siteContent = {
   hero: {
-    name: "Ahmed Mansour",
-    description: "Entrepreneur · Business Builder · Vision for Growth",
+    name: "Avyren",
+    description: "AI-Powered Tools for Growing Businesses",
     subheadline:
-      "Building companies from bold ideas. Creating impact through clarity and vision.",
-    ctaText: "Explore My Work",
-    portraitAlt: "Ahmed Mansour - Entrepreneur and Business Builder",
+      "Automate your business. Grow without limits. AI-powered tools that handle customer messages, bookings, orders, and support—so you can focus on what matters most.",
+    ctaText: "Start Free Trial",
+    portraitAlt: "Avyren - AI-Powered Tools for Small Businesses",
   },
   about: {
-    title: "About Ahmed",
-    content: `Ahmed Mansour is an entrepreneur and business builder based in Egypt.
+    title: "Our Mission",
+    content: `We believe every small business deserves powerful tools to grow. Not complex systems that take months to learn. Not expensive software that breaks the budget.
 
-With a passion for creating companies from the ground up, he combines strategy, design, and execution to bring ideas to life.
+Avyren exists to give small businesses the same automation and intelligence that big companies use—without the complexity or cost.
 
-His work spans startup building, digital innovation, and growth-focused leadership.`,
+We build simple, smart tools that save time, increase revenue, and help businesses serve customers better. Because when small businesses succeed, everyone wins.`,
     highlights: [
-      { year: "2024", event: "Partner at ETIJAH" },
-      { year: "2025", event: "Partner at Adnan" },
-      { year: "2025", event: "Developing Zamele" },
+      { year: "2024", event: "Launched AI message management platform" },
+      { year: "2025", event: "Helping hundreds of businesses automate operations" },
+      { year: "2025", event: "Expanding to serve businesses worldwide" },
     ],
   },
   certificates: [
@@ -62,39 +63,63 @@ His work spans startup building, digital innovation, and growth-focused leadersh
   ],
   startups: [
     {
-      name: "ETIJAH",
-      description: "Real estate marketing company.",
+      name: "Multi-Channel Messaging",
+      description: "Connect Instagram, WhatsApp, Telegram, and your website. See all customer conversations in one dashboard with AI-powered responses.",
       status: "Active",
-      year: "2022",
-      category: "Real Estate Marketing",
-      link: "#",
-    },
-    {
-      name: "ADNAN",
-      description: "Ai based platform for real estate.",
-      status: "Active",
-      year: "2023",
-      category: "Ai Platform",
-      link: "#",
-    },
-    {
-      name: "ZAMELE",
-      description: "Learning platform for university students.",
-      status: "Coming Soon",
       year: "2024",
-      category: "Learning Platform",
+      category: "AI Platform",
+      link: "#",
+    },
+    {
+      name: "Automated Bookings",
+      description: "Customers book appointments directly through messages. Your calendar stays updated, and reminders go out automatically.",
+      status: "Active",
+      year: "2024",
+      category: "Automation",
+      link: "#",
+    },
+    {
+      name: "Order Management",
+      description: "Process orders, track status, send confirmations, and handle follow-ups—all without manual work.",
+      status: "Active",
+      year: "2024",
+      category: "CRM & Sales",
       link: "#",
     },
   ],
   startupsNote:
-    "Each venture reflects a commitment to solving real problems with clarity and purpose.",
+    "Everything you need to automate your business operations, all in one simple platform.",
+  latestUpdate: {
+    title: "What We're Building Now",
+    content: `Right now, we're focused on making our AI message management system even smarter and more powerful.
+
+We're adding support for more messaging channels, improving our AI's understanding of complex requests, and building new automation features that save even more time.
+
+Our latest project: an advanced booking system that handles group reservations, recurring appointments, and complex scheduling—all through simple messages.
+
+We're also working on better analytics that show you exactly how automation is helping your business grow, with clear insights you can act on immediately.
+
+Everything we build is based on feedback from business owners like you. If there's a feature that would help your business, we want to hear about it.`,
+  },
   vision: {
-    title: "Vision",
-    content: `I build products and companies that help people grow.
+    title: "Why Choose Avyren",
+    content: `Built for Small Businesses
+We understand your challenges because we're a small business too. Our tools solve real problems you face every day.
 
-My vision is to bridge creativity and business through clarity, strategic thinking, and human-centered execution.
+Simple, Not Simplistic
+Powerful features without the complexity. If you can use WhatsApp, you can use Avyren.
 
-Every venture starts with a bold question — and ends with real impact.`,
+AI That Actually Works
+Our AI understands context, learns your business, and gets smarter over time. It's not just automated responses—it's intelligent assistance.
+
+Affordable Pricing
+Enterprise-level tools at small business prices. No hidden fees, no long-term contracts, just fair pricing that grows with you.
+
+Fast Setup
+Get started in minutes, not months. Connect your channels, customize your settings, and start automating today.
+
+Reliable Support
+Real people who understand your business. Get help when you need it, learn best practices, and grow with confidence.`,
   },
   testimonials: [
     {
@@ -128,7 +153,7 @@ Every venture starts with a bold question — and ends with real impact.`,
     twitter: "https://twitter.com/ahmedmansour",
   },
   footer: {
-    name: "Ahmed Mansour",
+    name: "Ahmed Masnour",
     tagline: "Crafted with purpose by Ahmed",
     year: new Date().getFullYear(),
   },
@@ -147,6 +172,7 @@ export default function Portfolio() {
         startups={siteContent.startups}
         note={siteContent.startupsNote}
       />
+      <LatestUpdate content={siteContent.latestUpdate} />
       <Vision content={siteContent.vision} />
       <Testimonials testimonials={siteContent.testimonials} />
       <Contact content={siteContent.contact} footer={siteContent.footer} />

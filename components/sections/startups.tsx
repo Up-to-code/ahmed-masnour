@@ -60,11 +60,11 @@ export function Startups({ startups, note }: StartupsProps) {
   }
 
   return (
-    <section id="startups" className="py-32 px-6 bg-white" ref={ref}>
+    <section id="startups" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-white" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
           <motion.h2
-            className="text-5xl lg:text-6xl font-serif text-slate-900 text-center mb-20"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 text-center mb-12 md:mb-16 lg:mb-20"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8 }}
@@ -72,7 +72,7 @@ export function Startups({ startups, note }: StartupsProps) {
             Ventures I've Built
           </motion.h2>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-10 mb-16">
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mb-12 md:mb-16">
             {startups.map((startup, index) => (
               <motion.div key={index} variants={cardVariants}>
                 <motion.div
@@ -84,12 +84,12 @@ export function Startups({ startups, note }: StartupsProps) {
                   whileTap={{ scale: 0.98 }}
                 >
                   <Card className="h-full transition-all duration-300 border-0 bg-gradient-to-br from-stone-50 to-white group">
-                    <CardContent className="p-10">
+                    <CardContent className="p-6 sm:p-8 md:p-10">
                       <div className="text-center space-y-6">
                         <div className="space-y-3">
                           <div className="flex items-center justify-center gap-3">
                             <motion.h3
-                              className="text-3xl font-serif text-slate-900"
+                              className="text-2xl sm:text-2xl md:text-3xl font-serif text-slate-900"
                               whileHover={{ scale: 1.05 }}
                               transition={{ type: "spring", stiffness: 400, damping: 17 }}
                             >
@@ -123,7 +123,7 @@ export function Startups({ startups, note }: StartupsProps) {
                         </div>
 
                         <motion.p
-                          className="text-lg text-slate-600 leading-relaxed font-light"
+                          className="text-base sm:text-lg text-slate-600 leading-relaxed font-light"
                           initial={{ opacity: 0 }}
                           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                           transition={{ duration: 0.8, delay: index * 0.1 + 0.4 }}
@@ -167,7 +167,7 @@ export function Startups({ startups, note }: StartupsProps) {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <p className="text-lg text-slate-600 leading-relaxed italic font-light">"{note}"</p>
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed italic font-light px-2 sm:px-0">"{note}"</p>
           </motion.div>
         </motion.div>
       </div>

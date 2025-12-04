@@ -16,15 +16,15 @@ const crimsonPro = Crimson_Pro({
 })
 
 export const metadata: Metadata = {
-  title: "Ahmed Mansour - Entrepreneur & Business Builder",
+  title: "Ahmed Mansour - Founder & CEO of Avyren",
   description:
-    "Ahmed Mansour is an entrepreneur and business builder based in Egypt. Building companies from bold ideas and creating impact through clarity and vision.",
-  keywords: "Ahmed Mansour, entrepreneur, business builder, startup, ITTIJA, ZAMELI, SAMAK, Egypt, innovation",
+    "Ahmed Mansour is the Founder & CEO of Avyren. Building simple, AI-powered tools for small businesses and empowering entrepreneurs to grow.",
+  keywords: "Ahmed Mansour, Avyren, Founder, CEO, entrepreneur, AI tools, small business automation, Egypt",
   authors: [{ name: "Ahmed Mansour" }],
   creator: "Ahmed Mansour",
   openGraph: {
-    title: "Ahmed Mansour - Entrepreneur & Business Builder",
-    description: "Building companies from bold ideas. Creating impact through clarity and vision.",
+    title: "Ahmed Mansour - Founder & CEO of Avyren",
+    description: "Building simple, AI-powered tools for small businesses and empowering entrepreneurs to grow.",
     url: "https://ahmedmansour.com",
     siteName: "Ahmed Mansour",
     type: "website",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     
     card: "summary_large_image",
-    title: "Ahmed Mansour - Entrepreneur & Business Builder",
-    description: "Building companies from bold ideas. Creating impact through clarity and vision.",
+    title: "Ahmed Mansour - Founder & CEO of Avyren",
+    description: "Building simple, AI-powered tools for small businesses and empowering entrepreneurs to grow.",
   },
   robots: {
     index: true,

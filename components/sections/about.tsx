@@ -11,9 +11,14 @@ interface Highlight {
   event: string
 }
 
+interface StorySection {
+  title: string
+  text: string
+}
+
 interface AboutContent {
   title: string
-  content: string
+  story: StorySection[]
   highlights: Highlight[]
 }
 
@@ -46,22 +51,31 @@ export function About({ content }: AboutProps) {
           <div className="grid lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-start">
             {/* Main Content */}
             <motion.div
-              className="lg:col-span-2 space-y-8"
+              className="lg:col-span-2 space-y-12"
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <div className="prose prose-xl prose-slate max-w-none">
-                {content.content.split("\n\n").map((paragraph, index) => (
-                  <motion.p
-                    key={index}
-                    className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed mb-6 md:mb-8 font-light"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
-                  >
-                    {paragraph}
-                  </motion.p>
+                {content.story.map((section, index) => (
+                  <div key={index} className="mb-10 last:mb-0">
+                    <motion.h3
+                      className="text-2xl font-serif text-slate-900 mb-4"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
+                    >
+                      {section.title}
+                    </motion.h3>
+                    <motion.p
+                      className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed font-light"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
+                    >
+                      {section.text}
+                    </motion.p>
+                  </div>
                 ))}
               </div>
 
